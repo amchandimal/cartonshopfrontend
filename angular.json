@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "carton-frontend"
+    }
+  },
+  "defaultProject": "carton-frontend",
+  "cli": {
+    "analytics": false
+  }
 }
