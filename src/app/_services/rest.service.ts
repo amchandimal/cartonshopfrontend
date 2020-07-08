@@ -15,6 +15,7 @@ export class RestService {
 
   private baseUrl: String = environment.baseUrl; 
   private getAllProductsUrl = this.baseUrl + 'api/getallproducts';
+  private getPriceForProductUrl = this.baseUrl + 'api/getprice';
   private getPriceListforProductUrl = this.baseUrl + 'api/getbulkprices';
 
   getAllProducts() {
@@ -24,5 +25,9 @@ export class RestService {
   getPriceListforProduct(id:number) {
     const params = new HttpParams().set('productid', id.toString());
     return this.http.get<PricingResponse[]>(this.getPriceListforProductUrl,{params});
+  }
+
+  getPriceForProduct(params:any) {
+    return this.http.get<PricingResponse>(this.getPriceForProductUrl,{params});
   }
 }
