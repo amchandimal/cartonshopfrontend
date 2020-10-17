@@ -17,6 +17,7 @@ export class RestService {
   private getAllProductsUrl = this.baseUrl + 'api/getallproducts';
   private getPriceForProductUrl = this.baseUrl + 'api/getprice';
   private getPriceListforProductUrl = this.baseUrl + 'api/getbulkprices';
+  private ssss = "aaaaaaaaaaaaaaaaaaaaaa";
 
   getAllProducts() {
     return this.http.get<ProductDto[]>(this.getAllProductsUrl);
